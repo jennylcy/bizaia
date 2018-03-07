@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/crEBEBEB"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:background="@color/crFFFFFF">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_height"
+                android:background="@drawable/layout_shadow"
+                app:title=""
+                app:titleMargin="0dp"
+                app:titleTextColor="@color/crFFFFFF">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_back_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="-2dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:src="@drawable/icon_back" />
+
+                    <TextView
+                        android:id="@+id/tv_detail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/action_bar_height"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/cr_2e2e2e"
+                        android:textSize="@dimen/size_sp_16" />
+
+                    <ImageView
+                        android:id="@+id/iv_more"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:padding="10dp"
+                        android:src="@drawable/icon_share_hui" />
+
+                </FrameLayout>
+
+            </android.support.v7.widget.Toolbar>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cr000000"
+            android:layout_below="@id/tool_bar"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/simple_player_view_player"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/crFFFFFF">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/iv_head"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:riv_oval="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/iv_head"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/cr595959"
+                    android:textSize="@dimen/size_sp_16" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_line_1156bf_radius_2"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="3dp"
+                        android:text=""
+                        android:textColor="@color/cr_1156bf"
+                        android:textSize="@dimen/size_sp_12" />
+
+                    <ImageView
+                        android:id="@+id/ivAttention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center"
+                        android:src="@drawable/icon_jiaguanzhu_sel" />
+
+                    <ImageView
+                        android:id="@+id/ivCollect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:layout_gravity="right|center"
+                        android:layout_marginRight="50dp"
+                        android:src="@drawable/icon_star" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvBuyNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textColor="@color/cr808080"
+                    android:textSize="@dimen/size_sp_14" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/viewFrame"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="6dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/layout_shadow" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1px"
+                android:layout_marginLeft="8dp"
+                app:tabIndicatorColor="@color/cr_1156bf"
+                app:tabIndicatorHeight="2dp"
+                android:layout_gravity="center_horizontal"
+                app:tabGravity="fill"
+                app:layout_scrollFlags="scroll"
+                app:tabSelectedTextColor="@color/cr_1156bf"
+                app:tabTextAppearance="@style/TabLayoutTextAppearance"
+                app:tabTextColor="@color/cr595959" />
+        </FrameLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-1px"
+            android:background="@color/crFFFFFF" />
+    </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/linPdf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cr_f4f4f4"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/pdfBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_height"
+                android:background="@color/cr4D4D4D"
+                >
+                <ImageView
+                    android:id="@+id/ivBackPdf"
+                    android:layout_width="@dimen/action_bar_height"
+                    android:layout_height="@dimen/action_bar_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_back_white"/>
+                <TextView
+                    android:id="@+id/tvTitlePdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/cr595959"
+                    android:paddingLeft="100dp"
+                    android:paddingRight="100dp"
+                    android:lines="1"
+                    android:textSize="18sp"
+                    />
+                <ImageView
+                    android:id="@+id/ivPreview"
+                    android:layout_width="@dimen/action_bar_height"
+                    android:layout_height="@dimen/action_bar_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:clickable="true"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_mulu" />
+            </RelativeLayout>
+            <com.bizaia.zhongyin.widget.ScrollControlViewPager
+                android:id="@+id/vpPDF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/pdfBar"
+                />
+            <FrameLayout
+                android:id="@+id/flBrowse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cr7f000000"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvBrowse"
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right" />
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

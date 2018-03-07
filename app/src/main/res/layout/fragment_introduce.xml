@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/crFFFFFF">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/relVideo"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="216dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp">-->
+                <!--<com.bizaia.zhongyin.widget.player.widget.IjkVideoView-->
+                    <!--android:id="@+id/ivvPlayer"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/linBg"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@android:color/black"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--&lt;!&ndash; 封面显示&ndash;&gt;-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/ivVideoIcon"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:visibility="visible"/>-->
+                <!--</LinearLayout>-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/ivState"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:src="@drawable/icon_stop"/>-->
+            <!--</RelativeLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="6dp"-->
+                <!--android:layout_marginBottom="6dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+                <!--<com.makeramen.roundedimageview.RoundedImageView-->
+                    <!--android:id="@+id/rivCompany"-->
+                    <!--android:layout_width="31dp"-->
+                    <!--android:layout_height="31dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="12dp"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--app:riv_mutate_background="true"-->
+                    <!--app:riv_oval="true" />-->
+                <!--<TextView-->
+                    <!--android:id="@+id/tvCompanyName"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:textColor="@color/cr595959"-->
+                    <!--android:text="companyName"/>-->
+            <!--</LinearLayout>-->
+            <!--<TextView-->
+                <!--android:id="@+id/wvIntroduction"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="16sp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textColor="@color/cr595959"-->
+                <!--android:lineSpacingExtra="14dp"/>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1px"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:background="@color/cr_d8d8d8"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@color/cr_2e2e2e"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:text="@string/company_teacher" />-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/rvTeacher"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"/>-->
+        <!--</LinearLayout>-->
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      />
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/pb_web_progress"-->
+        <!--style="?android:attr/progressBarStyleHorizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginTop="@dimen/action_bar_height_without_line" />-->
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

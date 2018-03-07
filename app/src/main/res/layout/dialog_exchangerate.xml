@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cr00000000">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/cr7f000000"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/crFFFFFF">
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textColor="@color/cr_1156bf"
+            android:text="@string/btn_cancel"/>
+        <TextView
+            android:id="@+id/tvEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:textColor="@color/cr_1156bf"
+            android:layout_alignParentRight="true"
+            android:text="@string/complete"/>
+    </RelativeLayout>
+    <cn.addapp.pickers.widget.WheelListView
+        android:id="@+id/wlvExchangeRates"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+   <!-- <com.aigestudio.wheelpicker.WheelPicker
+        android:id="@+id/rvExchangeRates"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="60px"
+        android:layout_marginRight="60px"
+        android:layout_marginBottom="40dp"
+        android:clipToPadding="false"
+       />-->
+</LinearLayout>
+</LinearLayout>

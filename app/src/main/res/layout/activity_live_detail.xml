@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rlParenttest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/viewBar"
+            layout="@layout/view_detail_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.bizaia.zhongyin.widget.LivePlayer
+            android:id="@+id/lPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            />
+
+        <include
+            layout="@layout/view_live_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rlInput"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cr00000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/cr00000000"/>
+
+        <LinearLayout
+            android:id="@+id/linInput"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:background="@color/crEBEBEB"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <EditText
+                android:id="@+id/etImInputAll"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@drawable/im_input_bg"
+                android:paddingLeft="4dp"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/btnSendAll"
+                android:layout_width="60dp"
+                android:layout_height="36dp"
+                android:background="@drawable/im_send_bg"
+                android:gravity="center"
+                android:text="@string/live_palyer_im_send"
+                android:textColor="@color/crFFFFFF"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linPdf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cr_f4f4f4"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/pdfBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_height"
+            android:background="@color/cr4D4D4D"
+            >
+
+            <ImageView
+                android:id="@+id/ivBackPdf"
+                android:layout_width="@dimen/action_bar_height"
+                android:layout_height="@dimen/action_bar_height"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/icon_back_white"/>
+
+            <TextView
+                android:id="@+id/tvTitlePdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:lines="1"
+                android:paddingLeft="100dp"
+                android:paddingRight="100dp"
+                android:textColor="@color/cr595959"
+                android:textSize="18sp"
+                />
+
+            <ImageView
+                android:id="@+id/ivPreview"
+                android:layout_width="@dimen/action_bar_height"
+                android:layout_height="@dimen/action_bar_height"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/icon_mulu"/>
+        </RelativeLayout>
+
+        <com.bizaia.zhongyin.widget.ScrollControlViewPager
+            android:id="@+id/vpPDF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/pdfBar"
+            />
+
+        <FrameLayout
+            android:id="@+id/flBrowse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cr7f000000"
+            android:visibility="gone">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvBrowse"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"/>
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

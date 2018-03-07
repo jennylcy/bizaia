@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/crEBEBEB"
+    android:layout_height="match_parent">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/crFFFFFF">
+       <com.makeramen.roundedimageview.RoundedImageView
+           android:id="@+id/rivIcon"
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:scaleType="centerCrop"
+           android:layout_marginTop="12dp"
+           android:layout_marginBottom="12dp"
+           android:layout_marginLeft="10dp"
+           app:riv_mutate_background="true"
+           app:riv_oval="true" />
+       <TextView
+           android:id="@+id/tvName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_toRightOf="@+id/rivIcon"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="12dp"
+           android:textSize="15sp"
+           android:textColor="@color/cr595959"
+           android:text=""/>
+       <TextView
+           android:id="@+id/tvLiveState"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="4dp"
+           android:paddingBottom="4dp"
+           android:paddingLeft="10dp"
+           android:paddingRight="10dp"
+           android:background="@drawable/live_state_bg"
+           android:layout_toRightOf="@+id/rivIcon"
+           android:layout_below="@+id/tvName"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="4dp"
+           android:textColor="@color/cr_1156bf"
+           android:text=""
+           android:textSize="12sp"/>
+       <TextView
+           android:id="@+id/tvNumberAll"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/tvLiveState"
+           android:layout_toRightOf="@+id/rivIcon"
+           android:textSize="12sp"
+           android:textColor="@color/cr_a1a1a1"
+           android:layout_marginLeft="10dp"
+           android:layout_marginTop="4dp"
+           android:text=""/>
+       <ImageView
+           android:id="@+id/ivAttention"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/icon_jiaguanzhu"
+           android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"
+           android:padding="10dp"
+           />
+   </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tlLive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_marginBottom="1px"
+        android:background="@color/crFFFFFF"
+        app:tabIndicatorColor="@color/cr_1156bf"
+        app:tabIndicatorHeight="2dp"
+        android:layout_gravity="center_horizontal"
+        app:tabGravity="fill"
+        app:layout_scrollFlags="scroll"
+        app:tabSelectedTextColor="@color/cr_1156bf"
+        app:tabTextAppearance="@style/TabLayoutTextAppearance"
+        app:tabTextColor="@color/cr595959" />
+
+    <android.support.v4.view.ViewPager
+android:id="@+id/vpLive"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/crFFFFFF"
+android:paddingTop="6dp"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.bizaia.zhongyin.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="true"
+        android:paddingBottom="@dimen/bottom_navigation_height" />
+
+
+    <com.bizaia.zhongyin.widget.NavigationView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom" />
+
+    <FrameLayout
+        android:id="@+id/fl_center_button"
+        android:layout_width="wrap_content"
+        android:layout_height="78dp"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/tab_center_background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="6dp"
+            android:src="@drawable/icon_tab_uncheck"/>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

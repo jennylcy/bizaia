@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="4dp"
+        android:text="测试试"
+        android:textColor="@color/state_normal_595959_select_1156bf"
+        android:textSize="@dimen/size_sp_16" />
+
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="15dp"
+        android:lineSpacingExtra="4dp"
+        android:text="测试试"
+        android:textColor="@color/cr_ff0000"
+        android:textSize="@dimen/size_sp_16" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/crBFBFBF" />
+
+</FrameLayout>

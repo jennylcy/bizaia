@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/container"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/crEBEBEB"
+             android:orientation="vertical">
+
+    <com.bizaia.zhongyin.widget.refresh.PtrClassicFrameLayout
+        android:id="@+id/pfLive"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvLive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="54dp"
+            android:background="@color/cr00000000"
+            android:clipToPadding="true"/>
+
+    </com.bizaia.zhongyin.widget.refresh.PtrClassicFrameLayout>
+</FrameLayout>

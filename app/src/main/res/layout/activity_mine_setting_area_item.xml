@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_area"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:paddingBottom="4dp"
+    android:paddingLeft="17dp"
+    android:paddingRight="17dp"
+    android:paddingTop="4dp"
+    android:textColor="@color/state_normal_595959_select_1156bf"
+    android:textSize="@dimen/size_sp_16">
+
+
+</TextView>

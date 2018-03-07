@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@drawable/layout_shadow"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_btn_back"
+            android:layout_width="@dimen/action_bar_height"
+            android:layout_height="@dimen/action_bar_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/cr595959"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <com.bizaia.zhongyin.widget.refresh.PtrClassicFrameLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/action_bar_height_without_line">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_js_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp" />
+    </com.bizaia.zhongyin.widget.refresh.PtrClassicFrameLayout>
+</RelativeLayout>

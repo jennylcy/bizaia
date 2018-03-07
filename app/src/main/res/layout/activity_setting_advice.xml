@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/crFFFFFF"
+              android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@drawable/layout_shadow"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/action_bar_height"
+            android:layout_height="@dimen/action_bar_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/setting_advice"
+            android:textColor="@color/cr595959"
+            android:textSize="18sp"/>
+
+    </FrameLayout>
+    <com.bizaia.zhongyin.widget.KeyboardLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        android:fitsSystemWindows="true">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="8dp"
+                android:text="@string/setting_advice_words"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_advice"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/react_line_595959"
+                android:gravity="top"
+                android:hint="@string/message_input"
+                android:lineSpacingExtra="4dp"
+                android:padding="8dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/react_line_595959"
+                android:hint="@string/find_pwd_hint_email"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:textColorHint="@color/crCCCCCC"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="65dp"
+                android:background="@drawable/round_535353_radius_4"
+                android:gravity="center"
+                android:text="@string/setting_submit"
+                android:textColor="@color/crFFFFFF"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </ScrollView>
+    </com.bizaia.zhongyin.widget.KeyboardLayout>
+</RelativeLayout>

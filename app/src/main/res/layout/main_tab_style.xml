@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="test"
+        android:textColor="@color/state_normal_595959_select_1156bf"
+        android:textSize="14sp"/>
+
+    <View
+        android:id="@+id/tab_indicator"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/state_tab_indicator_sj"/>
+
+    <View
+        android:id="@+id/tab_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@id/tv_title"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/tv_title"
+        android:layout_gravity="bottom"
+        android:background="@drawable/state_tab_indicator"/>
+
+</RelativeLayout>

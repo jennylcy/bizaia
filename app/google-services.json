@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "398815294780",
+    "firebase_url": "https://bizaia-43717.firebaseio.com",
+    "project_id": "bizaia-43717",
+    "storage_bucket": "bizaia-43717.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398815294780:android:0fb385d690926925",
+        "android_client_info": {
+          "package_name": "com.bizaia.zhongyin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398815294780-jend69bsu56apcdeuiki2dhpibb0kbab.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bizaia.zhongyin",
+            "certificate_hash": "45ec1047a1a7e8785691c237bf00777e0d79d265"
+          }
+        },
+        {
+          "client_id": "398815294780-0i92slkch6e8ctsqc0ej47la3f8h9ev2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCOoSTbWruIgu16bTdpBOnWiAm20laY1w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398815294780-k1a0ie4ta4larhf2ujt2l2ul53rf111j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bizaia.zhongyin"
+              }
+            },
+            {
+              "client_id": "398815294780-0i92slkch6e8ctsqc0ej47la3f8h9ev2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/layout_shadow"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/rv_recently_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:lineSpacingExtra="4dp"
+        android:paddingTop="15dp"
+        android:textColor="@color/cr_2e2e2e"
+        android:text="test测试test测试test测试test测试test测试test测试test测试"
+        android:textSize="@dimen/size_sp_16" />
+
+    <ImageView
+        android:id="@+id/iv_recently_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/rv_recently_title"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tv_news_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_below="@id/rv_recently_title"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/iv_recently_img"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="8dp"
+        android:maxLines="5"
+        android:text="test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试test测试"
+        android:textSize="@dimen/size_sp_14" />
+
+</RelativeLayout>

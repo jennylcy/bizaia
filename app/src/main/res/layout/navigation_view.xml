@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_tab_container"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    android:background="@drawable/layout_shadow_top"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_marginBottom="4dp"-->
+    <!--android:layout_weight="2"-->
+    <!--android:src="@drawable/icon_news_state" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/app_page_discovery"-->
+    <!--android:textColor="@color/state_normal_595959_select_1156bf"-->
+    <!--android:textSize="@dimen/size_sp_9" />-->
+    <!--</LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="2"
+            android:src="@drawable/icon_video_state"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_page_video"
+            android:textColor="@color/state_normal_595959_select_1156bf"
+            android:textSize="@dimen/size_sp_9"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="2"
+            android:src="@drawable/icon_replay_state"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_page_live"
+            android:textColor="@color/state_normal_595959_select_1156bf"
+            android:textSize="@dimen/size_sp_9"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="2"
+            android:src="@drawable/icon_mgzi_state"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_page_monthly"
+            android:textColor="@color/state_normal_595959_select_1156bf"
+            android:textSize="@dimen/size_sp_9"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="2"
+            android:src="@drawable/icon_user_state"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_page_self_center"
+            android:textColor="@color/state_normal_595959_select_1156bf"
+            android:textSize="@dimen/size_sp_9"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+

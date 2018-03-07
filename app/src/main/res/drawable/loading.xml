@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:duration="100" android:drawable="@drawable/refreshing1"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing2"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing3"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing4"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing5"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing6"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing7"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing8"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing9"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing10"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing11"/>
+    <item android:duration="100" android:drawable="@drawable/refreshing12"/>
+
+</animation-list>

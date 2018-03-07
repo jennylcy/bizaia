@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:background="@color/crFFFFFF"
+                                                 android:fitsSystemWindows="true"
+                                                 android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/action_bar_height_without_line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/about_company_title"
+                    android:textColor="@color/cr_2e2e2e"
+                    android:textSize="18sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/about_company_name"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/about_place_title"
+                    android:textColor="@color/cr_2e2e2e"
+                    android:textSize="18sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/about_place"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/about_build_time_title"
+                    android:textColor="@color/cr_2e2e2e"
+                    android:textSize="18sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/about_build_time"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/about_worker_num_title"
+                    android:textColor="@color/cr_2e2e2e"
+                    android:textSize="18sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/about_worker"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/about_work_detail_title"
+                    android:textColor="@color/cr_2e2e2e"
+                    android:textSize="18sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/about_work_detail"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp"/>
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="5dp"-->
+                    <!--android:text="基本金の額"-->
+                    <!--android:textColor="@color/cr_2e2e2e"-->
+                    <!--android:textSize="18sp"/>-->
+            <!--</FrameLayout>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:lineSpacingExtra="4dp"-->
+                <!--android:text="1000万円"-->
+                <!--android:textColor="@color/cr595959"-->
+                <!--android:textSize="15sp"/>-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/about_phone_title"
+                    android:textColor="@color/cr_2e2e2e"
+                    android:textSize="18sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/about_phone"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/about_email_title"
+                    android:textColor="@color/cr_2e2e2e"
+                    android:textSize="18sp"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/about_email"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@drawable/layout_shadow"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/action_bar_height"
+            android:layout_height="@dimen/action_bar_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/about_operator"
+            android:textColor="@color/cr595959"
+            android:textSize="18sp"/>
+
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

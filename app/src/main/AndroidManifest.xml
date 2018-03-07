@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.bizaia.zhongyin">
+
+    <!-- app所需权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.REGISTER"/>
+    <uses-permission android:name="com.amazonaws.androidtest.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 银联支付 -->
+    <uses-permission android:name="android.permission.NFC"/>
+
+    <uses-feature android:name="android.hardware.nfc.hce"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD"/>
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 直播 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <!-- &lt;!&ndash; 官方文档自带的权限 &ndash;&gt; -->
+    <!-- <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> -->
+    <!-- <permission -->
+    <!-- android:name="com.amazon.mysampleapp.permission.C2D_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> -->
+    <!-- <uses-permission android:name="com.amazon.mysampleapp.permission.C2D_MESSAGE" /> -->
+    <application
+        android:name=".BIZAIAApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
+        <activity
+            android:name=".FlushActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.launch.LauncherActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.login.ui.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- 集成line客户端登录授权，需要添如下格式的过滤器 -->
+            <intent-filter>
+                <data android:scheme="line.1506605335"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="tencent1105975283"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!-- &lt;!&ndash; [START gcm_receiver] &ndash;&gt; -->
+        <!-- <receiver -->
+        <!-- android:name="com.google.android.gms.gcm.GcmReceiver" -->
+        <!-- android:exported="true" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+
+
+        <!-- <category android:name="gcm.play.android.samples.com.gcmquickstart" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- &lt;!&ndash; [END gcm_receiver] &ndash;&gt; -->
+
+
+        <!-- &lt;!&ndash; [START gcm_listener] &ndash;&gt; -->
+        <!-- <service -->
+        <!-- android:name=".module.message.AWSGcmListenerService" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <!-- &lt;!&ndash; [END gcm_listener] &ndash;&gt; -->
+
+        <service android:name=".module.message.firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".module.message.firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo"/>
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.bizaia.zhongyin.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <service android:name=".module.monthly.service.DownLoadService"/>
+        <service android:name=".module.mine.service.UpdateService"/>
+
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".module.pay.PaySuccessActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.pay.PaymentActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.pay.RechargeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".module.login.ui.RegisterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.discovery.ui.search.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.live.ui.search.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.pay.PayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.pay.AddMoneyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.monthly.ui.pdfdetail.PDFDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MonthlyDetailTheme"/>
+        <activity
+            android:name=".module.monthly.ui.detail.JSDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MonthlyDetailTheme"/>
+        <activity
+            android:name=".module.monthly.ui.detail.jscomment.JSDetailCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.MonthlyDetailTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name=".module.video.ui.search.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.monthly.ui.detail.js.JSActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.monthly.ui.search.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.AccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.setting.AboutActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.pay.AddMoneyResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.setting.advice.AdviceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".module.mine.ui.BuyHistoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.monthly.ui.subscibe.MonthlyBuyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.MonthlyPdfActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.CollectionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.live.ui.LiveDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity
+            android:name=".module.mine.ui.AttentionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.CompanyHostActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.UserInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.PerfectInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.setting.SettingActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.PhoneChangeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.EmailChangeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.PwdChangeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.NickNameChangeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.setting.area.AreaActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.video.ui.detail.DetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.discovery.ui.chair.detail.DetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.discovery.ui.chair.DetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.detail.DetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.live.ui.LivingRoomActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".module.live.ui.LiveCoursewareDetail"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.ChairPayActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.mine.ui.UpdateActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.login.ui.SelectPlaceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.login.ui.RegisterTwoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.login.ui.EmailFindActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.login.ui.FindPhoneActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|uiMode|screenLayout|screenSize|smallestScreenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|uiMode|screenLayout|screenSize|smallestScreenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".module.monthly.ui.subscibe.MonthlySubSuccessActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".module.message.ActionPushActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name=".module.message.ui.MessageActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".module.mine.ui.AgreementActivity"
+            android:screenOrientation="portrait"/>
+
+        <meta-data
+            android:name="WECHAT_ID"
+            android:value="wxf98fe90e52ea0052"/>
+        <meta-data
+            android:name="WECHAT_SECRET"
+            android:value="ec87d2f3287864ae599bf35f2dfb39e2"/>
+
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="false"
+            android:process=":QALSERVICE"/>
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE"/>
+
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal"/>
+            </intent-filter>
+        </receiver>
+        <!-- 系统消息广播接收器 -->
+
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.service.TASK_REMOVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".util.PhoneReceiver">
+            <intent-filter>
+
+                <!-- 获取来电广播 -->
+                <action android:name="android.intent.action.PHONE_STATE"/>
+                <!-- 获取去电广播 -->
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

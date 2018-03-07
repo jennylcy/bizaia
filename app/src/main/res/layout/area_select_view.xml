@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/tl_box_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/crEBEBEB"
+        app:alignContent="space_around"
+        app:alignItems="flex_start"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start" />
+
+    <FrameLayout
+        android:id="@+id/fl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/crFFFFFF"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="中国"
+            android:textColor="@color/cr595959"
+            android:textSize="@dimen/size_sp_16" />
+
+        <ImageView
+            android:id="@+id/iv_push_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:rotation="90"
+            android:src="@drawable/icon_more" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/crBFBFBF" />
+
+</FrameLayout>

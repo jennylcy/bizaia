@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/search_title"
+        android:textColor="@color/cr595959"
+        android:visibility="gone"
+        android:textSize="@dimen/size_sp_15" />
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flKeyworld"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:alignContent="space_around"
+        app:alignItems="flex_start"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start" />
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/rv_search"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"/>-->
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cr595959"
+        android:visibility="gone" />
+
+</LinearLayout>

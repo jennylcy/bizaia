@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="57dp"
+    android:id="@+id/rlAttention"
+    android:gravity="center_vertical">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_user_blue"
+        app:riv_mutate_background="true"
+        app:riv_oval="true" />
+    <TextView
+        android:id="@+id/tvCompanyName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/cr_2e2e2e"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:layout_marginLeft="10dp"
+        android:text="zhongyingcompany"/>
+    <ImageView
+        android:id="@+id/ivAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingBottom="10dp"
+        android:src="@drawable/icon_jiaguanzhu_sel"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/cr_d8d8d8"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

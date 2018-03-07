@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/action_bar_height_without_line">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:id="@+id/iv_pay_success_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignTop="@+id/tv_notice_title"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_toLeftOf="@+id/tv_notice_title"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_ok" />
+
+            <TextView
+                android:id="@+id/tv_notice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/pay_success_notice"
+                android:textColor="@color/cr595959"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/line_space"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_notice_title"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/crD8D8D8" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line_space"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/pay_success_content"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pay_success_title"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_order_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_sub_title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pay_success_order_num"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_pay_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_order_number"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pay_success_method"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_pay_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pay_type"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pay_success_time"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_pay_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_pay_time"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pay_success_money"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/line_space2"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_pay_money"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/crD8D8D8" />
+
+            <LinearLayout
+                android:id="@+id/ll_code_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line_space2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_code_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line_space2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="下記のQRコードで入場検証にしてください"
+                    android:textColor="@color/cr595959"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="15dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_check_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_code_container"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="※購入されたすべてのコンテンツは「マイページ」の「マイ購入」にてチェックできます。"
+                android:textColor="@color/cr595959"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@drawable/layout_shadow"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/pay_success"
+            android:textColor="@color/cr_2e2e2e"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ivCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:src="@drawable/icon_kefu" />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

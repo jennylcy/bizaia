@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ssdk_oks_share">シェア</string>
+    <string name="ssdk_oks_sharing">シェア操作中…</string>
+    <string name="ssdk_oks_share_failed">シェアが完了しました</string>
+    <string name="ssdk_oks_share_completed">シェア成功しました</string>
+    <string name="ssdk_oks_share_canceled">シェアをキャンセルしました</string>
+    <string name="ssdk_oks_cancel">キャンセル</string>
+    <string name="ssdk_oks_multi_share">图文分享</string>
+    <string name="ssdk_oks_confirm">確認</string>
+    <string name="ssdk_oks_contacts">联系人</string>
+    <string name="ssdk_oks_pull_to_refresh">プルダウンでデータを更新する</string>
+    <string name="ssdk_oks_release_to_refresh">放すとデータを更新する</string>
+    <string name="ssdk_oks_refreshing">更新中…</string>
+</resources>

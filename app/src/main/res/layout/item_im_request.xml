@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView
+        android:id="@+id/tvRequestId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/cr595959"
+        android:layout_centerVertical="true"
+        android:text="1"
+        android:layout_marginRight="6dp"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/rivRequestIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="6dp"
+        android:layout_toRightOf="@+id/tvRequestId"
+        app:riv_mutate_background="true"
+        app:riv_oval="true"/>
+
+    <TextView
+        android:id="@+id/tvRequestName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:textColor="@color/cr_a1a1a1"
+        android:textSize="12sp"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@+id/rivRequestIcon"
+        android:layout_toLeftOf="@+id/tvRequstIm"
+        android:layout_centerVertical="true"
+        android:text="brutus"/>
+    <TextView
+        android:id="@+id/tvRequstIm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon_im_request_bg"
+        android:gravity="center"
+        android:textColor="@color/im_bt_color"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:layout_centerVertical="true"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_alignParentRight="true"
+        android:text="@string/connect_voice"/>
+</RelativeLayout>

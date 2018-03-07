@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/crFFFFFF"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:paddingRight="20dp"
+            android:lineSpacingExtra="8dp"
+            android:text="测试测试测"
+            android:textColor="@color/cr_1156bf"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/crBFBFBF" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="8dp"
+            android:textColor="@color/cr595959"
+            android:text="测试"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="2dp"
+            android:gravity="right"
+            android:lineSpacingExtra="8dp"
+            android:text="测试"
+            android:textColor="@color/crA6A6A6"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/icon_delete"
+        android:visibility="visible" />
+    <ImageView
+        android:id="@+id/ivItemTips"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/msg_tips"/>
+</RelativeLayout>

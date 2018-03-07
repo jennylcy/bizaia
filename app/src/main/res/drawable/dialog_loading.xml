@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:duration="100" android:drawable="@drawable/dialog_loading1"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading2"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading3"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading4"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading5"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading6"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading7"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading8"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading9"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading10"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading11"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading12"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading13"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading14"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading15"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading16"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading17"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading18"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading19"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading20"/>
+    <item android:duration="100" android:drawable="@drawable/dialog_loading21"/>
+
+</animation-list>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:layout_height="match_parent">
+  <TextView
+      android:id="@+id/tvValueText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:textColor="@color/cr_2e2e2e"
+      android:gravity="center_horizontal"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      />
+</LinearLayout>
